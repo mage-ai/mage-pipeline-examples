@@ -338,17 +338,6 @@ We welcome contributions! Here's how you can help:
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/mage-ai)
 - [GitHub Discussions](https://github.com/mage-ai/mage-ai/discussions)
 
-## 🆚 Mage vs Other Tools
-
-| Feature | Mage | Airflow | Prefect |
-|---------|------|---------|---------|
-| **Setup Complexity** | Low | High | Medium |
-| **Python-First** | ✅ | ✅ | ✅ |
-| **Interactive Development** | ✅ | ❌ | ❌ |
-| **ML Focus** | ✅ | ❌ | ❌ |
-| **Learning Curve** | Low | High | Medium |
-| **Community** | Growing | Large | Medium |
-
 ## 🐛 Troubleshooting
 
 ### Common Issues
@@ -373,16 +362,6 @@ We welcome contributions! Here's how you can help:
 - Search [GitHub Issues](https://github.com/mage-ai/mage-ai/issues)
 - Join the [Mage Discord](https://discord.gg/mage-ai)
 - Create an issue in this repository
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🎁 Acknowledgments
-
-- [Mage AI Team](https://www.mage.ai/) for creating an amazing data orchestration platform
-- The open-source community for contributing examples and improvements
-- All contributors who help make this repository better
 
 ## 📞 Support
 

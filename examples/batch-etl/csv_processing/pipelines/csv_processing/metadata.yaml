@@ -1,0 +1,86 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file: {}
+    file_source: {}
+  downstream_blocks:
+  - clean_data_71c
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Fetch CSV From URL
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: fetch_csv_from_url_71c
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file: {}
+    file_source: {}
+  downstream_blocks:
+  - write_to_bigquery_71c
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Clean Data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - fetch_csv_from_url_71c
+  uuid: clean_data_71c
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file: {}
+    file_source: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Write To BigQuery
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - clean_data_71c
+  uuid: write_to_bigquery_71c
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-09-03 07:52:53.129604+00:00'
+created_by: admin
+data_integration: null
+description: The pipeline fetches a csv file from a public url, processes and cleans
+  the data by handling missing values and standardizing formats, then loads the transformed
+  data into bigquery for analysis. this automated process streamlines data ingestion,
+  transformation, and storage to support data-driven decision-making.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Csv Processing
+notification_config: {}
+overrides: null
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+state_store_config: {}
+tags: []
+type: python
+uuid: csv_processing
+variables_dir: /home/src/mage_data/test3
+widgets: []

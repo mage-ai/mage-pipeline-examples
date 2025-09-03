@@ -1,0 +1,120 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: markdowns/documentation_for_machine_learning_pipeline.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: Documentation for machine learning pipeline
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: documentation_for_machine_learning_pipeline
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_loaders/load_titanic_survival_dataset.py
+  downstream_blocks:
+  - extract_and_impute_numbers
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Load Titanic survival dataset
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_titanic_survival_dataset
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_path: transformers/extract_and_impute_numbers.py
+  downstream_blocks:
+  - train_classification_model
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Extract and impute numbers
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_titanic_survival_dataset
+  uuid: extract_and_impute_numbers
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_path: data_exporters/train_classification_model.py
+  downstream_blocks:
+  - online_inference_endpoint
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Train classification model
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - extract_and_impute_numbers
+  uuid: train_classification_model
+- all_upstream_blocks_executed: false
+  color: pink
+  configuration:
+    file_path: custom/online_inference_endpoint.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Online inference endpoint
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - train_classification_model
+  uuid: online_inference_endpoint
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-09-03 08:06:49.774772+00:00'
+created_by: null
+data_integration: null
+description: Load survival dataset, extract fatures, train model, and deploy an online
+  inference endpoint.
+execution_framework: standard
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: ML model training
+notification_config: {}
+overrides: null
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+state_store_config: {}
+tags:
+- example
+- tutorial
+- machine learning
+- classification
+type: python
+uuid: ml_model_training
+variables_dir: /home/src/mage_data/test3
+widgets: []
