@@ -33,14 +33,14 @@ For enterprise teams and production environments, **Mage Pro** provides:
 This repository contains a comprehensive collection of pipeline examples organized by category:
 
 ### 📊 Data Integration
-- **API to Database** - Extract data from REST APIs and load into PostgreSQL
+- **API to Database** - Extract data from REST APIs and load into databases
 - **Multi-source Sync** - Combine data from multiple APIs, databases, and files
 - **Database Replication** - Real-time database synchronization and replication
 
 ### 📦 Batch ETL
 - **CSV Processing** - Process and transform CSV files with data validation
 - **JSON ETL** - Extract, transform, and load JSON data from various sources
-- **Database Batch** - Large-scale batch processing from databases
+- **Combine Python and SQL** - Hybrid processing using both Python and SQL operations
 
 ### 🌊 Streaming Pipelines
 - **Kafka Consumer** - Real-time data processing from Kafka streams
@@ -50,7 +50,7 @@ This repository contains a comprehensive collection of pipeline examples organiz
 ### 🤖 ML Models
 - **Model Training** - End-to-end ML model training pipeline
 - **Model Inference** - Deploy and serve ML models in production
-- **MLOps Pipeline** - Complete MLOps workflow with monitoring and deployment
+- **Guide to Accuracy, Precision, and Recall** - Learn ML evaluation metrics
 
 ### 🔍 Data Quality
 - **Validation Pipeline** - Automated data validation and quality checks
