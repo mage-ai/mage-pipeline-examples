@@ -1,0 +1,155 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - confusion_matrix_builder
+  - baseline_score
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: monster_loader
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: monster_loader
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - accuracy_calculator
+  - precision_calculation
+  - recall_calculation
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: confusion_matrix_builder
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - monster_loader
+  uuid: confusion_matrix_builder
+- all_upstream_blocks_executed: false
+  color: rose
+  configuration: {}
+  downstream_blocks:
+  - model_evaluation
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: accuracy_calculator
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - confusion_matrix_builder
+  uuid: accuracy_calculator
+- all_upstream_blocks_executed: false
+  color: sky
+  configuration: {}
+  downstream_blocks:
+  - model_evaluation
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: precision_calculation
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - confusion_matrix_builder
+  uuid: precision_calculation
+- all_upstream_blocks_executed: false
+  color: teal
+  configuration: {}
+  downstream_blocks:
+  - model_evaluation
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: recall_calculation
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - confusion_matrix_builder
+  uuid: recall_calculation
+- all_upstream_blocks_executed: false
+  color: pink
+  configuration: {}
+  downstream_blocks:
+  - model_evaluation
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: baseline_score
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - monster_loader
+  uuid: baseline_score
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: model_evaluation
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - accuracy_calculator
+  - precision_calculation
+  - recall_calculation
+  - baseline_score
+  uuid: model_evaluation
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-09-03 08:12:52.547021+00:00'
+created_by: 2
+data_integration: null
+description: The main metrics used to assess performance of classification models
+  are accuracy, precision, and recall.
+execution_framework: standard
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Guide to accuracy, precision, and recall
+notification_config: {}
+overrides: null
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+state_store_config: {}
+tags:
+- machine learning
+- tutorial
+type: python
+uuid: guide_to_accuracy__precision__and_recall
+variables_dir: /home/src/mage_data/test3
+widgets: []
