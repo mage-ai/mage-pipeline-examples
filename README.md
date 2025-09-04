@@ -326,17 +326,15 @@ We welcome contributions! Here's how you can help:
 ### Official Documentation
 - [Mage Documentation](https://docs.mage.ai/)
 - [Mage GitHub Repository](https://github.com/mage-ai/mage-ai)
-- [Mage Community](https://www.mage.ai/community)
 
 ### Tutorials and Guides
 - [Getting Started with Mage](https://docs.mage.ai/getting-started)
-- [Building Your First Pipeline](https://docs.mage.ai/tutorials/building-your-first-pipeline)
+- [Building Your First Pipeline](https://docs.mage.ai/guides/load-api-data)
 - [Deploying to Production](https://docs.mage.ai/production)
 
 ### Community
-- [Mage Discord](https://discord.gg/mage-ai)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/mage-ai)
-- [GitHub Discussions](https://github.com/mage-ai/mage-ai/discussions)
+- [Mage Slack community](www.mage.ai/chat)
+- [GitHub Discussions](https://github.com/mage-ai/mage-ai/issues)
 
 ## 🐛 Troubleshooting
 
@@ -360,7 +358,7 @@ We welcome contributions! Here's how you can help:
 ### Getting Help
 - Check the [Mage Documentation](https://docs.mage.ai/)
 - Search [GitHub Issues](https://github.com/mage-ai/mage-ai/issues)
-- Join the [Mage Discord](https://discord.gg/mage-ai)
+- Join the [Mage Slack](www.mage.ai/chat)
 - Create an issue in this repository
 
 ## 📞 Support
